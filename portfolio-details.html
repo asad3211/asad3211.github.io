@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Personal Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Personal
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+<!-- ------------------------------------------ -->
+          <div class="col-lg-8">
+            <h2 class="portfolio-title">Project Details</h2>
+
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+<!-- ----------------------------------- -->
+          <div class="col-lg-4 portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Image Processing</li>
+              <li><strong>Client</strong>: Freelance</li>
+              <!-- <li><strong>Project date</strong>: 01 March, 2020</li> -->
+              <!-- <li><strong>Project URL</strong>: <a href="#">https://github.com/m-asad-iqbal/diabetic-retinopathy-detection-and-classification-</a></li> -->
+            </ul>
+
+            <p>
+              Diabetic retinopathy detection and classification by using mixed models for the disease grading database.
+            </p>
+          </div>
+<!-- ------------------------------------------- -->
+
+<!-- -------------------------------------------- -->
+
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+
+  </main><!-- End #main -->
+
+  <!-- <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+    <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div> --> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+  <!-- Dynamic Image, Category, and Description Loading Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Retrieve the project parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const project = urlParams.get('project');
+
+      // Get the corresponding elements and set the content
+      const imageElement = document.querySelector('.swiper-slide img');
+      const categoryElement = document.querySelector('.portfolio-info ul li:first-child');
+      const descriptionElement = document.querySelector('.portfolio-info p');
+      const projectTitleElement = document.querySelector('.portfolio-title');
+
+
+      if (project === 'diabetic') {
+        imageElement.src = "assets/img/portfolio/portfolio-details-1.jpg";
+        categoryElement.innerHTML = "<strong>Category</strong>: Image Processing";
+        descriptionElement.innerHTML = "Diabetic retinopathy detection and classification by using mixed models for the disease grading database.";
+        projectTitleElement.innerHTML = "Diabetic Retinopathy Detection & Classification";
+      } else if (project === 'forgery') {
+        imageElement.src = "assets/img/portfolio/portfolio-details-2.jpg";
+        categoryElement.innerHTML = "<strong>Category</strong>: Deep Learning";
+        descriptionElement.innerHTML = "This project focuses on Digital Image Forgery (DIF) detection, specifically addressing copy-move forgery. The comparative analysis explores Image Copy-Move Forgery Detection (IC-MFD) algorithms, categorizing them into two groups based on features: hand-crafted and machine-crafted. By collecting and grouping various IC-MFDs, the research aims to provide a comprehensive overview for researchers in this field.";
+        projectTitleElement.innerHTML = "Image Forgery Detection";
+      } else if (project === 'wind-turbine') {
+        imageElement.src = "assets/img/portfolio/portfolio-details-dfig.jpg";
+        categoryElement.innerHTML = "<strong>Category</strong>: Electrical Engineering";
+        descriptionElement.innerHTML = "Developed a DFIG (Doubly Fed Induction Generator) Wind Turbine Control System using Matlab. This project aims to optimize wind energy conversion, enhance grid integration, and ensure efficient and stable performance.";
+        projectTitleElement.innerHTML = "DFIG Wind Turbine Control";
+      } else if (project === 'robo') {
+        imageElement.src = "assets/img/portfolio/portfolio-details-robo.jpg";
+        categoryElement.innerHTML = "<strong>Category</strong>: Machine Learning";
+        descriptionElement.innerHTML = "Developed a machine learning algorithms for efficient power plant scheduling, accurate water quality prediction, and precise demand forecasting that optimizes theresource utilization and meet the ever-changing demands of a dynamic environment.";
+        projectTitleElement.innerHTML = "Machine Learning, Robotics Control";
+      } else if (project === 'drone') {
+        imageElement.src = "assets/img/portfolio/portfolio-details-drone.jpg";
+        categoryElement.innerHTML = "<strong>Category</strong>: Machine Learning";
+        descriptionElement.innerHTML = "Artificial Intelligence is booming, as more accurate and efficient models are being built. This project implements ML (Machine Learning) and Genetic Algorithm. I have developed a system that enables one to find optimal parameters for a swarm of autonomous drones working to map the targets and obstacles in a controlled environment. This can be explained by any real world application in which we have to find something or someone in a crowd or within objects, for example finding an electric malfunction location or analyzing a danger zone.";
+        projectTitleElement.innerHTML = "Drones Swarm System Modelling and Controlling";
+      } else if (project === 'enc') {
+        imageElement.src = "assets/img/portfolio/portfolio-details-enc.jpg";
+        categoryElement.innerHTML = "<strong>Category</strong>: Image Processing";
+        descriptionElement.innerHTML = "This project entails securing images through chaotic map-based encryption. Employing bifurcation and Lyapunov diagrams, key performance metrics like entropy, PSNR, NPCR, correlation, MSE, UACI, time, and key sensitivity are assessed. Histogram equalization is applied, and the system's resilience to noise attacks (salt & pepper, Gaussian, crop) is examined. Robust encryption mechanisms ensure image confidentiality and integrity in diverse scenarios, offering a comprehensive solution for image security.";
+        projectTitleElement.innerHTML = "Image Encryption using Chaotic Maps";
+      } else if (project === 'vrr') {
+        imageElement.src = "assets/img/portfolio/portfolio-details-vr.jpg";
+        categoryElement.innerHTML = "<strong>Category</strong>: Electrical Engineering";
+        descriptionElement.innerHTML = "Revamp power grids into intelligent distribution networks with diverse distributed energy resources (DERs) for enhanced stability and power quality. Address voltage violation challenges from increased distributed generation through an innovative optimal voltage control method using feedforward neural networks (FFNN). Leveraging MATLAB®/Simulink®, our simulations affirm the effectiveness of this technique, ensuring a consistently stable voltage profile in various scenarios.";
+        projectTitleElement.innerHTML = "Intelligent Voltage Regulator";
+      } else if (project === 'ties') {
+        imageElement.src = "assets/img/portfolio/portfolio-details-ties.jpg";
+        categoryElement.innerHTML = "<strong>Category</strong>: Image Processing";
+        descriptionElement.innerHTML = "In this project, I implemented a range of cutting-edge techniques, from adaptive thresholding to active contour algorithms, to accurately identify and segment stones within images. The goal was to strike a balance between computation time and precision, and I'm proud to say that we achieved impressive results! ";
+        projectTitleElement.innerHTML = "Ties and Stones Image Segmentation";
+      } else if (project === 'model') {
+        imageElement.src = "assets/img/portfolio/portfolio-details-model.jpg";
+        categoryElement.innerHTML = "<strong>Category</strong>: Depp Learning";
+        descriptionElement.innerHTML = "I have successfully completed a captivating project that merges advanced technology with deep learning. Employing a deep neural network, I developed a system capable of identifying faces, reconstructing them in three dimensions, and executing precise face recognition from diverse perspectives.";
+        projectTitleElement.innerHTML = "3D Model from Different Angles";
+      } 
+      
+    });
+  </script>
+
+  
+  
+  
+  
+  
+</body>
+
+</html>
