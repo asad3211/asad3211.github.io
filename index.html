@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Personal Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha384-ezFUmGtGU4K1u7d6VveA6I8KGz3FE0Kofv5Ioe56VRW3vq9DDW5ISXf9v5XL0Xh9x" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <style>
+    .bi-icon {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Personal
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <h1><a href="index.html">Muhammad Asad Iqbal</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <!DOCTYPE html>
+      <html>
+
+      <head>
+        <script>
+          const roles = [
+            "Electrical Engineer",
+            "a Freelancer",
+            "a Data Scientist",
+            "Machine Learning Enthusiast",
+            "Certified Python Developer"
+          ];
+
+          let currentRoleIndex = 0;
+          let spanElement;
+          let textIndex = 0;
+          let isErasing = false;
+          let writingInterval;
+
+          function updateRole() {
+            spanElement = document.getElementById("role-span");
+
+            const roleText = roles[currentRoleIndex];
+
+            if (isErasing) {
+              // Erase one character.
+              spanElement.textContent = roleText.substring(0, textIndex - 1);
+              textIndex--;
+
+              if (textIndex < 0) {
+                // Switch to writing mode when erasing is complete.
+                isErasing = false;
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length; // Loop back to the first role
+                setTimeout(updateRole, 1000); // Delay before writing the next role (1000 milliseconds = 1 second)
+              } else {
+                setTimeout(updateRole, 100); // Delay before erasing the next character (100 milliseconds)
+              }
+            } else {
+              // Write one character.
+              spanElement.textContent = roleText.substring(0, textIndex + 1);
+              textIndex++;
+
+              if (textIndex > roleText.length) {
+                isErasing = true;
+                textIndex = roleText.length;
+                setTimeout(updateRole, 1000); // Delay before erasing the role (1000 milliseconds = 1 second)
+              } else {
+                setTimeout(updateRole, 100); // Delay before writing the next character (100 milliseconds)
+              }
+            }
+          }
+
+          window.onload = updateRole;
+        </script>
+      </head>
+
+      <body>
+        <h2>I'm <span id="role-span"></span></h2>
+      </body>
+
+      </html>
+
+
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#resume">Resume</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/muhammadasadiqbal/" target="_blank" class="linkedin"><i
+            class="bi bi-linkedin"></i><span class="tooltip">LinkedIn</span></a>
+        <a href="https://www.upwork.com/fl/~01d12b1438d4b2b443" target="_blank" class="upwork"><img
+            src="https://www.citypng.com/public/uploads/preview/upwork-round-black-logo-icon-11662556035iswg7nylot.png?v=2023082407"
+            alt="Upwork Profile" class="bi-icon"><span class="tooltip">Upwork</span></a>
+        <a href="https://github.com/m-asad-iqbal" target="_blank" class="github"><i class="bi bi-github"></i><span
+            class="tooltip">GitHub</span></a>
+        <a href="https://join.skype.com/invite/nOd1pvQXw7J9" target="_blank" class="skype"><i class="bi bi-skype"></i><span class="tooltip">Skype</span></a>
+        <a href="https://www.discordapp.com/users/1044253197226749983" target="_blank" class="discord"><i class="bi bi-discord"></i><span
+            class="tooltip">Discord</span></a>
+        <a href="https://api.whatsapp.com/send?phone=0923109451347" target="_blank" class="whatsapp"><i
+            class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+        <a href="mailto:engasadiqbal@yahoo.com" target="_blank" class="email"><i class="fas fa-envelope"></i><span
+            class="tooltip">Email</span></a>
+      </div>
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <!-- <h2>About</h2> -->
+        <p>Learn more about me</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="assets/img/me2.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Engineer &amp; Data Scientist </h3>
+          <p class="fst-italic">
+            Your Data, My Science: Crafting a Data-Driven World
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>engasadiqbal@yahoo.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Islamabad, Pakistan</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>MS in Electrical
+                    Engineering</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+              </ul>
+            </div>
+            <div style="text-align: left;">
+              <p>
+                I am a professional freelancer with a degree in Electrical Engineering and 8 years of experience in
+                research and development. My services are offered in various fields, including Engineering, Data
+                analytics, Machine Learning, Deep Learning, PCB designing, and Technical writing.
+              </p>
+
+              <p>
+                With expertise in Machine Learning and Deep Learning, I have the skills to improve existing solutions or
+                build an entire ML pipeline from scratch. My experience encompasses NLP, Time Series Analysis, Computer
+                Vision, GANs, constructing bots for the stock or cryptocurrency markets, establishing APIs for ML
+                models, and more.
+              </p>
+
+              <p>
+                I possess significant experience as a data analyst and research consultant with a deep understanding of
+                several financial models, statistical methods, and their applications. My specialization involves
+                providing valuable insights to businesses through the necessary data and knowledge to help them achieve
+                their end goals. This can help businesses manage more effectively and efficiently.
+              </p>
+
+              <p>
+                I am also a professional content writer with over six years of experience in technical writing. My
+                writing process includes proper topic research, content writing, editing and proofreading for grammar
+                and spelling, and plagiarism checks to deliver well-researched articles, blogs, and technical content.
+              </p>
+
+              <p>
+                As an electrical engineer, I possess rich experience in PCB design and firmware engineering. My designs
+                have included DC/DC converters, motor drivers, smartwatches, medical devices, PCB antennas, and wireless
+                IoT devices.
+              </p>
+
+              <p>
+                I guarantee quality and on-time delivery, and I am confident enough to provide a money-back guarantee.
+                Client satisfaction is my top priority. Please consider me for any project you may have in mind.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- End About Me -->
+
+      <!-- ======= Counts ======= -->
+      <div class="counts container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="96" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span>150 +</span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span>300 +</span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Counts -->
+
+
+      <!-- ======= Skills  ======= -->
+      <div class="skills container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Matlab <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Python <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="progress">
+              <span class="skill">Machine Learning <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">PCB Design <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Deep Learning <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">NLP <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Tableau <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">PowerBI <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div><!-- End Skills -->
+
+      <!-- ======= Interests ======= -->
+      <!-- <div class="interests container">
+
+      <div class="section-title">
+        <h2>Interests</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4">
+          <div class="icon-box">
+            <i class="ri-store-line" style="color: #ffbb2c;"></i>
+            <h3>Lorem Ipsum</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+            <h3>Dolor Sitema</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+            <h3>Sed perspiciatis</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
+            <h3>Magni Dolores</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-database-2-line" style="color: #47aeff;"></i>
+            <h3>Nemo Enim</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
+            <h3>Eiusmod Tempor</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
+            <h3>Midela Teren</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
+            <h3>Pira Neve</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-anchor-line" style="color: #b2904f;"></i>
+            <h3>Dirada Pack</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-disc-line" style="color: #b20969;"></i>
+            <h3>Moton Ideal</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-base-station-line" style="color: #ff5828;"></i>
+            <h3>Verdo Park</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
+            <h3>Flavor Nivelanda</h3>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Interests -->
+
+      <!-- ======= Testimonials ======= -->
+
+
+  </section><!-- End About Section -->
+
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <!-- <h2>Resume</h2> -->
+        <p>Check My Resume</p>
+      </div>
+
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Download Resume</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      </head>
+
+      <body>
+        <div class="center1">
+          <a href="https://drive.google.com/file/d/118UBqYP-arue-qMExrmSNQA86G5yU-bB/view?usp=sharing" target="_blank"
+            class="download-button">
+            Download Resume <i class="fas fa-download"></i>
+          </a>
+        </div>
+      </body>
+
+      </html>
+
+
+
+
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">Sumary</h3>
+          <div class="resume-item pb-0">
+            <h4>Muhammad Asad Iqbal</h4>
+            <p><em>Innovative and deadline-driven Electrical Engineer, Data Analyst, Machine Learning Specialist, PCB
+                Designer, and Technical Writer with 8+ years of expertise in a diverse range of fields. My services span
+                engineering, data analytics, ML/DL, technical writing, and PCB design, ensuring high-quality
+                deliverables. I'm dedicated to client satisfaction, offering a money-back guarantee and a strong
+                commitment to on-time delivery. Let's collaborate on your next project.</em></p>
+            <p>
+            <ul>
+              <li>Islamabad, Pakistan</li>
+              <li>engasadiqbal@yahoo.com</li>
+            </ul>
+            </p>
+          </div>
+
+          <h3 class="resume-title">Education</h3>
+          <div class="resume-item">
+            <h4>Master of Science in Electrical Engineering</h4>
+            <h5>2015 - 2018</h5>
+            <p><em>Comsats University, Islamabad, Pakistan</em></p>
+
+          </div>
+          <div class="resume-item">
+            <h4>Bachelor of Scienc in Electronics Engineering</h4>
+            <h5>2011 - 2015</h5>
+            <p><em>Comsats University, Islamabad, Pakistan</em></p>
+          </div>
+
+          <h3 class="resume-title">Certification</h3>
+          <div class="resume-item">
+            <h4>PCAP – Certified Associate in Python Programming</h4>
+            <p><em>Open Education and Development Group (OpenEDG)</em></p>
+            <a href="https://www.credly.com/badges/a27a4879-29b2-452b-8464-00eb8af53f2e" target="_blank">See
+              Certification</a>
+          </div>
+
+          <h3 class="resume-title">Course</h3>
+          <div class="resume-item">
+            <h4>Data Science Training</h4>
+            <p><em>Ministry of Information Technology, Pakistan</em></p>
+            <p><em>Duration: 4 months</em></p>
+
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <h3 class="resume-title">Experience</h3>
+          <div class="resume-item">
+            <h4>NOC Engineer</h4>
+            <h5>2016 - 2017</h5>
+            <p><em>PTCL, Islamabad, Pakistan </em></p>
+            <p>
+            <ul>
+              <li>To view, monitor, and control the network countrywide</li>
+              <li>Develops and implement trouble ticketing</li>
+              <li>Media resources allocation/planning</li>
+              <li>Configuration processes for Transmission, SDH, DWDM, and MPLS_TP networks</li>
+              <li>Coordinate and follow-up with field regions to rectify faults and other network activities</li>
+            </ul>
+            </p>
+          </div>
+          <div class="resume-item">
+            <h4>Top Rated Freelancer</h4>
+            <h5>2018 - Present</h5>
+            <p><em>Upwork, Freelancer.com</em></p>
+            <p>
+            <ul>
+              <li>Extensive experience as a freelance professional specializing in:</li>
+              <ul>
+                <li>Machine Learning</li>
+                <li>Computer Vision</li>
+                <li>Natural Lnaguage Processing</li>
+                <li>Image Processing</li>
+                <li>Data Analysis</li>
+              </ul>
+              <li>Successful completion of numerous projects across multiple platforms using MATLAB/SIMULINK and Python
+              </li>
+              <li>Five-year journey as a Freelance Engineer, encompassing diverse projects in:</li>
+              <ul>
+                <li>Electrical Engineering</li>
+                <li>Information Technology</li>
+                <li>Internet of Things</li>
+              </ul>
+              <li>Proven track record of collaborating with clients to develop tailored solutions that meet their
+                specific needs, resulting in client satisfaction and project success.</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Resume Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <p>My Services</p>
+      </div>
+
+      <div class="row">
+
+        <!-- -----------MACHINE LEARNING SOLUTION------------------ -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="fas fa-brain"></i></div>
+            <h4><a href="#" id="openModalML">Machine Learning Solutions</a></h4>
+            <p>Tailored ML models for data-driven insights</p>
+          </div>
+        </div>
+        <!-- Modal dialog for Machine Learning Solutions -->
+        <div id="myModalML" class="modal">
+          <div class="modal-content">
+            <span id="closeModalML" class="close-modal fancy-close-button">&times;</span>
+            <h2>Machine Learning Solutions</h2>
+            <ul>
+              <li>Expertise in machine learning algorithms and frameworks.</li>
+              <li>Customized ML models for various applications.</li>
+              <li>Data preprocessing, feature engineering, and model training.</li>
+              <li>Model evaluation, optimization, and performance tuning.</li>
+              <li>Integration of machine learning into existing systems.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- -----------MACHINE LEARNING SOLUTION------------------ -->
+
+        <!-- -----------COMPUTER VISION EXPERTISE------------------ -->
+
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class="fas fa-eye"></i></div>
+            <h4><a href="#" id="openModalCV">Computer Vision Expertise</a></h4>
+            <p>Visual data analysis and intelligent image processing</p>
+          </div>
+        </div>
+
+        <!-- Modal dialog -->
+        <div id="myModalCV" class="modal">
+          <div class="modal-content">
+            <span id="closeModalCV" class="close-modal fancy-close-button">&times;</span>
+            <h2>Computer Vision Expertise</h2>
+            <ul>
+              <li>Advanced image and video analysis capabilities.</li>
+              <li>Object detection, tracking, and recognition solutions.</li>
+              <li>Image segmentation and feature extraction techniques.</li>
+              <li>Deep learning models for image understanding.</li>
+              <li>Real-time computer vision applications.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- -----------COMPUTER VISION EXPERTISE------------------ -->
+
+        <!-- -----------DATA ANALYSIS SERVICES------------------ -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class="fas fa-chart-line"></i></div>
+            <h4><a href="#" id="openModalDA">Data Analysis Services</a></h4>
+            <p>In-depth insights from complex data structures</p>
+          </div>
+        </div>
+
+        <!-- Modal dialog -->
+        <div id="myModalDA" class="modal">
+          <div class="modal-content">
+            <span id="closeModalDA" class="close-modal fancy-close-button">&times;</span>
+            <h2>Data Analysis Services</h2>
+            <ul>
+              <li>Data cleaning, transformation, and visualization.</li>
+              <li>Statistical analysis and hypothesis testing.</li>
+              <li>Predictive modeling and regression analysis.</li>
+              <li>Clustering and classification for pattern recognition.</li>
+              <li>Data-driven insights for decision-making.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- -----------DATA ANALYSIS SERVICES------------------ -->
+
+        <!-- -----------MATLAB/SIMULINK Development------------------ -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="fas fa-file-code"></i></div>
+            <h4><a href="#" id="openModalMS">MATLAB/SIMULINK Development</a></h4>
+            <p>Implementing mathematical modeling and simulation solutions</p>
+          </div>
+        </div>
+
+        <!-- Modal dialog -->
+        <div id="myModalMS" class="modal">
+          <div class="modal-content">
+            <span id="closeModalMS" class="close-modal fancy-close-button">&times;</span>
+            <h2>MATLAB/SIMULINK Development</h2>
+            <ul>
+              <li>Custom MATLAB/SIMULINK model development.</li>
+              <li>Simulation and analysis of complex systems.</li>
+              <li>Predictive modeling and regression analysis.</li>
+              <li>Signal processing and data visualization.</li>
+              <li>Algorithm development and implementation.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- -----------MATLAB/SIMULINK Development------------------ -->
+
+        <!-- -----------Python Programming and Development------------------ -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="fab fa-python"></i></div>
+            <h4><a href="#" id="openModalPY">Python Programming and Development</a></h4>
+            <p>Building powerful applications with versatile Python programming</p>
+          </div>
+        </div>
+
+        <!-- Modal dialog -->
+        <div id="myModalPY" class="modal">
+          <div class="modal-content">
+            <span id="closeModalPY" class="close-modal fancy-close-button">&times;</span>
+            <h2>Python Programming and Development</h2>
+            <ul>
+              <li>Python application development for diverse needs.</li>
+              <li>Web development, scripting, and automation.</li>
+              <li>Data analysis and visualization with libraries like NumPy and Pandas.</li>
+              <li>Machine learning and deep learning applications.</li>
+              <li>Integration with databases and APIs.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- -----------Python Programming and Development------------------ -->
+
+        <!-- -----------PCB Design and Development Services------------------ -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="fas fa-microchip"></i></div>
+            <h4><a href="#" id="openModalPCB">PCB Design and Development Services</a></h4>
+            <p>Customized printed circuit board solutions for electronics</p>
+          </div>
+        </div>
+        
+        <!-- Modal dialog -->
+        <div id="myModalPCB" class="modal">
+          <div class="modal-content">
+            <span id="closeModalPCB" class="close-modal fancy-close-button">&times;</span>
+            <h2>PCB Design and Development Services</h2>
+            <ul>
+              <li>Customized printed circuit board design solutions.</li>
+              <li>PCB layout, prototyping, and component selection.</li>
+              <li>Reliable and efficient electronic system development.</li>
+              <li>Integration with various electronic applications.</li>
+              <li>Expertise in electronics and PCB technology.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- -----------PCB Design and Development Services------------------ -->
+
+        <!-- -----------Electrical Engineering Projects------------------ -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="fas fa-bolt"></i></div>
+            <h4><a href="#" id="openModalEE">Electrical Engineering Projects</a></h4>
+            <p>Crafting innovative solutions for electrical system challenges</p>
+          </div>
+        </div>
+
+        <!-- Modal dialog -->
+        <div id="myModalEE" class="modal">
+          <div class="modal-content">
+            <span id="closeModalEE" class="close-modal fancy-close-button">&times;</span>
+            <h2>Electrical Engineering Projects</h2>
+            <ul>
+              <li>Circuit design, analysis, and optimization.</li>
+              <li>Prototyping and testing of electronic systems.</li>
+              <li>PCB layout and component selection.</li>
+              <li>Control systems and automation.</li>
+              <li>Renewable energy and power distribution solutions</li>
+            </ul>
+          </div>
+        </div>
+        <!-- -----------Electrical Engineering Projects------------------ -->
+
+        <!-- -----------Internet of Things (IoT) Implementation------------------ -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="fas fa-globe"></i></div>
+            <h4><a href="#" id="openModalIOT">Internet of Things (IoT) Implementation</a></h4>
+            <p>Connecting devices for smarter, data-driven operations</p>
+          </div>
+        </div>
+        
+        <!-- Modal dialog -->
+        <div id="myModalIOT" class="modal">
+          <div class="modal-content">
+            <span id="closeModalIOT" class="close-modal fancy-close-button">&times;</span>
+            <h2>Internet of Things (IoT) Implementation</h2>
+            <ul>
+              <li>IoT system architecture and design.</li>
+              <li> Sensor integration and data collection.</li>
+              <li>Cloud connectivity for remote monitoring.</li>
+              <li>IoT platform development and customization.</li>
+              <li>Scalable and secure IoT solutions.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- -----------Internet of Things (IoT) Implementation------------------ -->
+        
+        <!-- -----------Information Technology Solutions------------------ -->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="fas fa-laptop-code"></i></div>
+            <h4><a href="#" id="openModalIT">Information Technology Solutions</a></h4>
+            <p>Crafting IT strategies to drive efficiency and success</p>
+          </div>
+        </div>
+        
+        <!-- Modal dialog -->
+        <div id="myModalIT" class="modal">
+          <div class="modal-content">
+            <span id="closeModalIT" class="close-modal fancy-close-button">&times;</span>
+            <h2>Information Technology Solutions</h2>
+            <ul>
+              <li>IoT system architecture and design.</li>
+              <li> Sensor integration and data collection.</li>
+              <li>Cloud connectivity for remote monitoring.</li>
+              <li>IoT platform development and customization.</li>
+              <li>Scalable and secure IoT solutions.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- -----------Information Technology Solutions------------------ -->
+
+
+
+      </div>
+
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <!-- <h2>Portfolio</h2> -->
+        <p>My Works</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-image">Image Processing/Computer Vision</li>
+            <li data-filter=".filter-ml">Machine Learning</li>
+            <li data-filter=".filter-dl">Deep Learning</li>
+            <li data-filter=".filter-ee">Electrical Engineering</li>
+          </ul>
+        </div>
+      </div>
+
+      
+
+      <div class="row portfolio-container">
+
+<!-- ------------------------------------ -->
+<!-- Diabetic Retinopathy Detection & Classification -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-image">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="portfolio-details.html?project=diabetic" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Project Details">Diabetic Retinopathy Detection & Classification</a></h4>
+    </div>
+  </div>
+</div>
+
+<!-- Image Forgery Detection -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-dl">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="portfolio-details.html?project=forgery" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Project Details">Image Forgery Detection</a></h4>
+    </div>
+  </div>
+</div>
+
+
+<!-- Drones Swarm System Modelling and Controlling -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-ml">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-drone.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="portfolio-details.html?project=drone" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Project Details">Drones Swarm System Modelling and Controlling</a></h4>
+    </div>
+  </div>
+</div>
+
+
+<!-- Machine Learning, Robotics Control -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-ml">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-robo.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="portfolio-details.html?project=robo" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Project Details">Machine Learning, Robotics Control</a></h4>
+    </div>
+  </div>
+</div>
+
+
+<!-- DFIG Wind Turbine Control -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-ee">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-dfig.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="portfolio-details.html?project=wind-turbine" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Project Details">DFIG Wind Turbine Control</a></h4>
+    </div>
+  </div>
+</div>
+
+<!-- Image Encryption using Chaotic Maps -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-image">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-enc.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="portfolio-details.html?project=enc" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Project Details">Image Encryption using Chaotic Maps</a></h4>
+    </div>
+  </div>
+</div>
+
+<!-- Intelligent Voltage Regulator -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-ee">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-vr.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="portfolio-details.html?project=vrr" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Project Details">Intelligent Voltage Regulator</a></h4>
+    </div>
+  </div>
+</div>
+
+<!-- Ties and Stones Image Segmentation -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-image">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-ties.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="portfolio-details.html?project=ties" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Project Details">Ties and Stones Image Segmentation</a></h4>
+    </div>
+  </div>
+</div>
+
+<!-- 3D Model from Different Angles -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-dl">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-model.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="portfolio-details.html?project=model" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Project Details">3D Model from Different Angles</a></h4>
+    </div>
+  </div>
+</div>
+<!-- ---------------------------------------------- -->
+
+<!-- More Projects can be viewed on Github -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-active">
+  <div class="portfolio-wrap">
+    <img src="assets/img/portfolio/portfolio-more.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4><a href="https://github.com/m-asad-iqbal?tab=repositories" target="_blank">More Projects can be Viewed on Github</a></h4>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        
+        <p>Contact Me</p>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>My Address</h3>
+            <p>
+              <a href="https://www.google.com/maps?q=Islamabad, Pakistan" target="_blank">
+                Islamabad, Pakistan
+              </a>
+            </p>
+          </div>
+        </div>
+        
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/muhammadasadiqbal/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.upwork.com/fl/~01d12b1438d4b2b443" class="upwork" target="_blank"><img
+                src="https://www.citypng.com/public/uploads/preview/upwork-round-black-logo-icon-11662556035iswg7nylot.png?v=2023082407"
+                alt="Upwork Profile" class="bi-icon"></a>
+              <a href="https://join.skype.com/invite/nOd1pvQXw7J9" target="_blank" class="skype"><i class="bi bi-skype"></i><span class="tooltip">Skype</span></a>
+              <a href="https://api.whatsapp.com/send?phone=0923109451347" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://github.com/m-asad-iqbal" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Email Me</h3>
+            <p><a href="mailto:nycer84@yahoo.com">nycer84@yahoo.com</a></p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-phone-call"></i>
+            <h3>Call Me</h3>
+            <p><a href="tel:+923215675953">+92 321 5675953</a></p>
+          </div>
+        </div>
+        
+
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+      </form>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+  <!-- <div class="credits"> -->
+  <!-- All the links in the footer should remain intact. -->
+  <!-- You can delete the links only if you purchased the pro version. -->
+  <!-- Licensing information: https://bootstrapmade.com/license/ -->
+  <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+  <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+  <!-- </div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
