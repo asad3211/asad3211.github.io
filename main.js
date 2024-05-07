@@ -265,7 +265,12 @@ function setupModal(openButton, modal, closeButton, modalContent) {
     }
   });
 }
-
+// ---------------Technical Writing Modal------------
+const openModalTW = document.getElementById("openModalTW");
+const modalTW = document.getElementById("myModalTW");
+const closeModalTW = document.getElementById("closeModalTW");
+const modalContentTW = document.querySelector(".modal-content");
+setupModal(openModalTW, modalTW, closeModalTW, modalContentTW);
 // ---------------Machine Learning Modal------------
 const openModalML = document.getElementById("openModalML");
 const modalML = document.getElementById("myModalML");
